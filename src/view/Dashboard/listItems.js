@@ -10,7 +10,8 @@ import BarChartIcon from '@mui/icons-material/BarChart';
 import LayersIcon from '@mui/icons-material/Layers';
 import AssignmentIcon from '@mui/icons-material/Assignment';
 import BusinessIcon from '@mui/icons-material/Business';
-import {Chip} from "@mui/material";
+import {Link} from "react-router-dom";
+import Orders from "./Orders";
 
 export const mainListItems = (
     <>
@@ -18,7 +19,6 @@ export const mainListItems = (
             <ListItemIcon>
                 <DashboardIcon />
             </ListItemIcon>
-            {/*<Chip label={<ListItemText primary="Dashboard" />} color="primary" variant="outlined"/>*/}
             <ListItemText primary="Dashboard" />
         </ListItemButton>
         <ListItemButton divider={true} selected={true}>
@@ -27,12 +27,16 @@ export const mainListItems = (
             </ListItemIcon>
             <ListItemText primary="Clientes" />
         </ListItemButton>
-        <ListItemButton divider={true} selected={true}>
-            <ListItemIcon>
-                <ShoppingCartIcon />
-            </ListItemIcon>
-            <ListItemText primary="Recibos" />
-        </ListItemButton>
+
+            <Link style={{textDecoration:"none", color:"#000000DE"}} to={"/recibos"}>
+                <ListItemButton divider={true} selected={true}>
+                    <ListItemIcon>
+                        <ShoppingCartIcon />
+                    </ListItemIcon>
+                    <ListItemText primary="Recibos" />
+                </ListItemButton>
+            </Link>
+
         <ListItemButton divider={true} selected={true}>
             <ListItemIcon>
                 <BusinessIcon />

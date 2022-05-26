@@ -1,12 +1,6 @@
 import * as React from 'react';
 import MUIDataTable from "mui-datatables";
-import Link from '@mui/material/Link';
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
-import Title from './Title';
+
 
 // Generate Order Data
 function createData(id, data, cliente, descricao, valorRecibo, formaPagamento, instrutor) {
